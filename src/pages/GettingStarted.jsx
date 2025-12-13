@@ -81,30 +81,11 @@ export default function GettingStarted() {
             <div className="p-4 rounded-lg bg-space-800 border border-space-600">
               <div className="flex items-center gap-3 mb-2">
                 <span className="text-pluto font-bold">3</span>
-                <h3 className="font-mono text-star">QA Agent Review</h3>
-              </div>
-              <p className="text-star-dim text-sm">The QA agent automatically reviews your changes, running tests and checking for issues. This loops until all checks pass.</p>
-            </div>
-
-            <div className="p-4 rounded-lg bg-space-800 border border-space-600">
-              <div className="flex items-center gap-3 mb-2">
-                <span className="text-pluto font-bold">4</span>
                 <h3 className="font-mono text-pluto">/pluto-sync</h3>
               </div>
               <p className="text-star-dim text-sm">Prepare your changes for a pull request. Syncs your branch and ensures everything is ready for review.</p>
             </div>
           </div>
-        </section>
-
-        {/* Next Steps */}
-        <section className="p-6 rounded-lg bg-space-800 border border-pluto/30">
-          <h2 className="text-xl font-semibold text-star mb-3">Next Steps</h2>
-          <p className="text-star-dim mb-4">
-            Now that Pluto is set up, start a coding session with your AI agent. Every file change will be automatically tracked with micro-commits.
-          </p>
-          <p className="text-star-dim">
-            When you're ready to ship, consolidate your micro-commits into clean, meaningful commits for your main branch.
-          </p>
         </section>
       </div>
     </div>
