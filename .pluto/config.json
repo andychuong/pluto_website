@@ -1,0 +1,13 @@
+{
+  "tools": [
+    "claude-code"
+  ],
+  "agents": [
+    "pluto-snap",
+    "pluto-start",
+    "micro-justice"
+  ],
+  "commitMode": "manual",
+  "addToAllowList": true,
+  "version": "1.0.0"
+}
