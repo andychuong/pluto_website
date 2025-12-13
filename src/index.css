@@ -101,6 +101,49 @@ body {
   50% { opacity: 1; transform: scale(1.2); }
 }
 
+/* Shooting stars - streak from top-right to bottom-left */
+.shooting-star {
+  position: absolute;
+  width: 150px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), rgba(255,255,255,0.9));
+  transform: rotate(215deg);
+  animation: shoot var(--duration, 3s) linear infinite;
+  animation-delay: var(--delay, 0s);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.shooting-star::before {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 0 10px 3px rgba(255,255,255,0.8), 0 0 20px 6px rgba(255,255,255,0.4);
+  right: 0;
+  top: -2px;
+}
+
+@keyframes shoot {
+  0% {
+    opacity: 0;
+    transform: rotate(215deg) translateX(0);
+  }
+  2% {
+    opacity: 1;
+  }
+  12% {
+    opacity: 0.8;
+    transform: rotate(215deg) translateX(500px);
+  }
+  13%, 100% {
+    opacity: 0;
+    transform: rotate(215deg) translateX(500px);
+  }
+}
+
 /* Code block styling */
 .code-block {
   background-color: var(--color-space-800);

@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, Github, Circle } from 'lucide-react'
 import { useState } from 'react'
 
 export default function Navbar() {
@@ -19,7 +19,7 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2 text-xl font-bold text-star hover:text-pluto transition-colors">
-            <span className="text-2xl">◐</span>
+            <Circle size={24} className="text-pluto fill-pluto/30" />
             <span>Pluto</span>
           </Link>
 
@@ -42,9 +42,10 @@ export default function Navbar() {
               href="https://github.com/andychuong/pluto"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-star-dim hover:text-star transition-colors"
+              className="text-star-dim hover:text-star transition-colors flex items-center gap-2"
             >
-              GitHub
+              <Github size={18} />
+              <span>GitHub</span>
             </a>
           </div>
 
@@ -78,9 +79,10 @@ export default function Navbar() {
               href="https://github.com/andychuong/pluto"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-star-dim hover:text-star transition-colors"
+              className="text-star-dim hover:text-star transition-colors flex items-center gap-2"
             >
-              GitHub
+              <Github size={18} />
+              <span>GitHub</span>
             </a>
           </div>
         )}

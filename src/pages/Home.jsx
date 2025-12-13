@@ -17,6 +17,18 @@ const twinklingStars = [
   { top: '85%', left: '45%', duration: '3s', delay: '1.8s' },
 ]
 
+// Shooting stars with staggered timing - spread across the sky
+const shootingStars = [
+  { top: '5%', left: '15%', duration: '6s', delay: '0s' },
+  { top: '12%', left: '45%', duration: '7s', delay: '1.5s' },
+  { top: '3%', left: '75%', duration: '5s', delay: '3s' },
+  { top: '18%', left: '25%', duration: '8s', delay: '5s' },
+  { top: '8%', left: '55%', duration: '6s', delay: '7s' },
+  { top: '15%', left: '85%', duration: '7s', delay: '9s' },
+  { top: '6%', left: '35%', duration: '5s', delay: '11s' },
+  { top: '10%', left: '65%', duration: '6s', delay: '13s' },
+]
+
 const features = [
   {
     icon: GitCommit,
@@ -57,15 +69,31 @@ export default function Home() {
         />
       ))}
 
+      {/* Shooting stars */}
+      {shootingStars.map((star, i) => (
+        <div
+          key={`shooting-${i}`}
+          className="shooting-star"
+          style={{
+            top: star.top,
+            left: star.left,
+            '--duration': star.duration,
+            '--delay': star.delay,
+          }}
+        />
+      ))}
+
       {/* Hero */}
       <section className="pt-32 pb-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-star mb-6 leading-tight">
-            Track Every Change.<br />
-            <span className="text-pluto">Ship Clean Commits.</span>
+            Track Every Change<br />
+            <span className="text-pluto">Ship Clean Commits</span>
           </h1>
           <p className="text-xl text-star-dim mb-10 max-w-2xl mx-auto leading-relaxed">
-            Pluto automatically micro-commits your AI agent's file changes, then consolidates them into meaningful commits. Never lose work, always ship clean history.
+            Pluto automatically micro-commits your AI agent's file changes.<br />
+            Then consolidates them into meaningful commits.<br />
+            Never lose work, always ship clean history.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Link
