@@ -12,8 +12,8 @@ export default function CodeBlock({ children, language = 'bash' }) {
 
   return (
     <div className="relative group">
-      <div className="code-block">
-        <code>{children}</code>
+      <div className="code-block overflow-x-auto">
+        <code className="whitespace-nowrap">{children}</code>
       </div>
       <button
         onClick={handleCopy}
