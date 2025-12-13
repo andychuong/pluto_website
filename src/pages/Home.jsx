@@ -3,6 +3,20 @@ import { GitCommit, Layers, Zap, Terminal } from 'lucide-react'
 import CodeBlock from '../components/CodeBlock'
 import FeatureCard from '../components/FeatureCard'
 
+// Twinkling stars with randomized positions and timing
+const twinklingStars = [
+  { top: '8%', left: '15%', duration: '4s', delay: '0s' },
+  { top: '12%', left: '85%', duration: '3s', delay: '1s' },
+  { top: '25%', left: '10%', duration: '5s', delay: '0.5s' },
+  { top: '18%', left: '70%', duration: '3.5s', delay: '2s' },
+  { top: '35%', left: '92%', duration: '4s', delay: '1.5s' },
+  { top: '45%', left: '5%', duration: '3s', delay: '0.8s' },
+  { top: '55%', left: '88%', duration: '4.5s', delay: '2.5s' },
+  { top: '65%', left: '20%', duration: '3.5s', delay: '1.2s' },
+  { top: '75%', left: '78%', duration: '4s', delay: '0.3s' },
+  { top: '85%', left: '45%', duration: '3s', delay: '1.8s' },
+]
+
 const features = [
   {
     icon: GitCommit,
@@ -29,12 +43,23 @@ const features = [
 export default function Home() {
   return (
     <div className="stars-bg min-h-screen">
+      {/* Twinkling stars */}
+      {twinklingStars.map((star, i) => (
+        <div
+          key={i}
+          className="twinkle"
+          style={{
+            top: star.top,
+            left: star.left,
+            '--duration': star.duration,
+            '--delay': star.delay,
+          }}
+        />
+      ))}
+
       {/* Hero */}
       <section className="pt-32 pb-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="inline-block mb-6 px-4 py-2 rounded-full bg-space-800 border border-space-600 text-star-dim text-sm">
-            Git workflow for the AI era
-          </div>
           <h1 className="text-4xl md:text-6xl font-bold text-star mb-6 leading-tight">
             Track Every Change.<br />
             <span className="text-pluto">Ship Clean Commits.</span>
