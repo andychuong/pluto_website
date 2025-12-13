@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { GitBranch, History, Users, AlertTriangle, Zap, ArrowRight } from 'lucide-react'
+import { GitBranch, History, Zap, Users, ArrowRight } from 'lucide-react'
 
 export default function Overview() {
   return (
@@ -14,24 +14,29 @@ export default function Overview() {
         {/* Our Story Section */}
         <section className="mb-16">
           <h2 className="text-2xl font-semibold text-star mb-6">Our Story</h2>
-          <div className="space-y-4 text-star-dim leading-relaxed">
+          <div className="space-y-6 text-lg text-star-dim leading-relaxed">
             <p>
-              For the last 10 weeks, we've been growing our AI skills and refining our workflows.
-              Individually, this has dramatically increased our ability to ship code.
+              For the last 10 weeks, we've been deep in the trenches—learning to code with AI,
+              refining our workflows, and shipping faster than we ever thought possible.
+              Individually, we became <span className="text-star">machines</span>.
             </p>
             <p>
-              However, when you begin to work in teams, we found that moving fast comes at a cost.
+              Then we tried working as a team.
             </p>
-            <div className="p-6 rounded-lg bg-space-800 border border-space-600 my-6">
-              <p className="text-star italic">
-                "AI software engineers tend to work beyond the scope of a given feature. When AI can
-                fix a small bug in 3 seconds, there's a small voice in your head that says <span className="text-pluto">fix it now</span>.
-                One additional fix becomes two, two fixes become three, and soon the scope of your
-                commit becomes polluted."
-              </p>
-            </div>
             <p>
-              We realized that our individual speed was creating team-wide chaos. Something had to change.
+              Turns out, when everyone's moving at AI speed, things get messy. Fast.
+            </p>
+            <p>
+              Here's what happens: you're building a feature, and your AI spots a small bug nearby.
+              Three seconds to fix it. <span className="text-pluto italic">"Why not?"</span> you think.
+              So you fix it. Then you notice another thing. And another. Before you know it, your
+              "simple feature commit" touches 47 files across 12 different concerns.
+            </p>
+            <p>
+              Your teammate opens a PR and has no idea what they're looking at.
+            </p>
+            <p className="text-star font-medium">
+              We were shipping code faster than ever—but collaborating worse than ever.
             </p>
           </div>
         </section>
@@ -39,38 +44,27 @@ export default function Overview() {
         {/* The Problem Section */}
         <section className="mb-16">
           <h2 className="text-2xl font-semibold text-star mb-6">The Problem</h2>
-          <div className="p-6 rounded-lg bg-space-800 border border-amber-500/30 mb-6">
-            <div className="flex items-start gap-4">
-              <AlertTriangle className="text-amber-500 shrink-0 mt-1" size={24} />
-              <p className="text-star-dim leading-relaxed">
-                <span className="text-star font-semibold">Current development practices aren't built for AI-first development.</span> AI
-                developers work in silos, independently shipping features at incredible speed. We believe
-                collaboration between humans is still valuable—but there's no good way for AI-first
-                developers to work together in teams.
-              </p>
-            </div>
-          </div>
-
-          <h3 className="text-lg font-semibold text-star mb-4">The Current State</h3>
-          <div className="grid md:grid-cols-2 gap-4">
-            <div className="p-4 rounded-lg bg-space-800 border border-space-600">
-              <div className="flex items-center gap-3 mb-2">
-                <Users size={20} className="text-star-dim" />
-                <span className="font-medium text-star">Siloed Development</span>
-              </div>
-              <p className="text-star-dim text-sm">
-                Teams work on features independently with minimal coordination
-              </p>
-            </div>
-            <div className="p-4 rounded-lg bg-space-800 border border-space-600">
-              <div className="flex items-center gap-3 mb-2">
-                <GitBranch size={20} className="text-star-dim" />
-                <span className="font-medium text-star">Microservice Architecture</span>
-              </div>
-              <p className="text-star-dim text-sm">
-                Separate services reduce conflicts but also reduce collaboration
-              </p>
-            </div>
+          <div className="space-y-6 text-lg text-star-dim leading-relaxed">
+            <p>
+              The tools we use every day—Git, GitHub, the PR workflow—were built for a different era.
+              An era where humans typed every line, changes were deliberate, and commits were
+              <span className="text-star"> meaningful</span>.
+            </p>
+            <p>
+              But AI-first development is different. Changes happen in bursts. Context switches are instant.
+              The line between "fixing this bug" and "refactoring that module" blurs in seconds.
+            </p>
+            <p>
+              Most teams respond by retreating into silos. Microservices. Feature flags.
+              Separate repos. <span className="text-star italic">"Just stay out of each other's way."</span>
+            </p>
+            <p>
+              But we think that's giving up on something important. We still believe in collaboration.
+              In code review. In teammates who understand what you're building and why.
+            </p>
+            <p className="text-star font-medium">
+              There had to be a better way.
+            </p>
           </div>
         </section>
 
