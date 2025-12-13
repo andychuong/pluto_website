@@ -95,7 +95,7 @@ export default function Home() {
       <section className="py-20 px-6 bg-space-800/50">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-star text-center mb-4">
-            Built for AI-First Development
+            Built for AI-First Development Teams
           </h2>
           <p className="text-star-dim text-center mb-12 max-w-2xl mx-auto">
             When AI agents write code, changes happen fast. Pluto keeps up.
