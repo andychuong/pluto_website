@@ -5,7 +5,8 @@
   "agents": [
     "pluto-snap",
     "pluto-start",
-    "micro-justice"
+    "consolidate",
+    "micro-justice-commands"
   ],
   "commitMode": "manual",
   "addToAllowList": true,

@@ -58,28 +58,40 @@ export default function GettingStarted() {
         <section className="mb-12">
           <h2 className="text-2xl font-semibold text-star mb-4">Basic Usage</h2>
           <p className="text-star-dim mb-6">
-            Once initialized, Pluto works automatically with your AI coding agents. Here are the main commands:
+            Once initialized, Pluto integrates with your AI coding agent through slash commands. Here's the typical workflow:
           </p>
 
           <div className="space-y-6">
             <div className="p-4 rounded-lg bg-space-800 border border-space-600">
-              <h3 className="font-mono text-pluto mb-2">pluto init</h3>
-              <p className="text-star-dim text-sm">Initialize Pluto in your current project</p>
+              <div className="flex items-center gap-3 mb-2">
+                <span className="text-pluto font-bold">1</span>
+                <h3 className="font-mono text-pluto">/pluto-start</h3>
+              </div>
+              <p className="text-star-dim text-sm">Open Claude Code and run this command to enable micro-commit tracking. Every code change will be automatically committed with context.</p>
             </div>
 
             <div className="p-4 rounded-lg bg-space-800 border border-space-600">
-              <h3 className="font-mono text-pluto mb-2">pluto list</h3>
-              <p className="text-star-dim text-sm">Display all available commands</p>
+              <div className="flex items-center gap-3 mb-2">
+                <span className="text-pluto font-bold">2</span>
+                <h3 className="font-mono text-pluto">/pluto-fuse</h3>
+              </div>
+              <p className="text-star-dim text-sm">Consolidate your micro-commits into meaningful, well-documented commits. Groups related changes together with clear explanations.</p>
             </div>
 
             <div className="p-4 rounded-lg bg-space-800 border border-space-600">
-              <h3 className="font-mono text-pluto mb-2">pluto update</h3>
-              <p className="text-star-dim text-sm">Update agents to the latest versions</p>
+              <div className="flex items-center gap-3 mb-2">
+                <span className="text-pluto font-bold">3</span>
+                <h3 className="font-mono text-star">QA Agent Review</h3>
+              </div>
+              <p className="text-star-dim text-sm">The QA agent automatically reviews your changes, running tests and checking for issues. This loops until all checks pass.</p>
             </div>
 
             <div className="p-4 rounded-lg bg-space-800 border border-space-600">
-              <h3 className="font-mono text-pluto mb-2">pluto update --branch [name]</h3>
-              <p className="text-star-dim text-sm">Update from a specific branch</p>
+              <div className="flex items-center gap-3 mb-2">
+                <span className="text-pluto font-bold">4</span>
+                <h3 className="font-mono text-pluto">/pluto-sync</h3>
+              </div>
+              <p className="text-star-dim text-sm">Prepare your changes for a pull request. Syncs your branch and ensures everything is ready for review.</p>
             </div>
           </div>
         </section>
