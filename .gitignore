@@ -1,7 +1,7 @@
 # AI tooling
-.ai-git/
-.claude/
-.pluto/
+.ai-git
+.claude
+.pluto
 
 # Logs
 logs
