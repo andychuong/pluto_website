@@ -1,12 +1,14 @@
-import { Github, Circle } from 'lucide-react'
+import { Github } from 'lucide-react'
 
 export default function Footer() {
   return (
     <footer className="border-t border-space-600 bg-space-900">
       <div className="max-w-6xl mx-auto px-6 py-8">
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="flex items-center gap-2 text-star-dim">
-            <Circle size={20} className="text-pluto fill-pluto/30" />
+          <p className="text-star-dim text-sm">
+            Built for AI-first engineers
+          </p>
+          <div className="text-star-dim">
             <span>Pluto</span>
           </div>
           <div className="flex gap-6 text-star-dim text-sm">
@@ -28,9 +30,6 @@ export default function Footer() {
               Issues
             </a>
           </div>
-          <p className="text-star-dim text-sm">
-            Built for AI-first engineers
-          </p>
         </div>
       </div>
     </footer>
