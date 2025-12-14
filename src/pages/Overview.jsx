@@ -1,116 +1,119 @@
 import { Link } from 'react-router-dom'
-import { GitBranch, History, Zap, ArrowRight } from 'lucide-react'
+import { GitBranch, History, Zap, ArrowRight, AlertCircle, Users, Code } from 'lucide-react'
 
 export default function Overview() {
   return (
     <div className="min-h-screen pt-24 pb-20 px-6">
       <div className="max-w-6xl mx-auto">
         {/* Hero Section */}
-        <h1 className="text-4xl font-bold text-star mb-4">The Story Behind Pluto</h1>
-        <p className="text-xl text-star-dim mb-16">
-          Building the git workflow for AI-first teams.
-        </p>
-
-        {/* Our Story Section */}
-        <section className="mb-16">
-          <h2 className="text-2xl font-semibold text-star mb-6">Our Story</h2>
-          <div className="space-y-6 text-lg text-star-dim leading-relaxed">
-            <p>
-              For the last 10 weeks, we've been deep in the trenches—learning to code with AI,
-              refining our workflows, and shipping faster than we ever thought possible.
-              Individually, we became <span className="text-star">machines</span>.
-            </p>
-            <p>
-              Then we tried working as a team.
-            </p>
-            <p>
-              Turns out, when everyone's moving at AI speed, things get messy. Fast.
-            </p>
-            <p>
-              Here's what happens: you're building a feature, and your AI spots a small bug nearby.
-              Three seconds to fix it. <span className="text-pluto italic">"Why not?"</span> you think.
-              So you fix it. Then you notice another thing. And another. Before you know it, your
-              "simple feature commit" touches 47 files across 12 different concerns.
-            </p>
-            <p>
-              Your teammate opens a PR and has no idea what they're looking at.
-            </p>
-            <p className="text-star font-medium">
-              We were shipping code faster than ever—but collaborating worse than ever.
-            </p>
-          </div>
-        </section>
-
-        {/* The Problem Section */}
-        <section className="mb-16">
-          <h2 className="text-2xl font-semibold text-star mb-6">The Problem</h2>
-          <div className="space-y-6 text-lg text-star-dim leading-relaxed">
-            <p>
-              The tools we use every day—Git, GitHub, the PR workflow—were built for a different era.
-              An era where humans typed every line, changes were deliberate, and commits were
-              <span className="text-star"> meaningful</span>.
-            </p>
-            <p>
-              But AI-first development is different. Changes happen in bursts. Context switches are instant.
-              The line between "fixing this bug" and "refactoring that module" blurs in seconds.
-            </p>
-            <p>
-              Most teams respond by retreating into silos. Microservices. Feature flags.
-              Separate repos. <span className="text-star italic">"Just stay out of each other's way."</span>
-            </p>
-            <p>
-              But we think that's giving up on something important. We still believe in collaboration.
-              In code review. In teammates who understand what you're building and why.
-            </p>
-            <p className="text-star font-medium">
-              There had to be a better way.
-            </p>
-          </div>
-        </section>
-
-        {/* Our Solution Section */}
-        <section className="mb-16">
-          <h2 className="text-2xl font-semibold text-star mb-6">Our Solution</h2>
-          <p className="text-star-dim mb-8 leading-relaxed">
-            <span className="text-star font-semibold">Pluto</span> is a git workflow tool that integrates
-            with AI coding agents. It weaves together your development process—from individual code changes
-            (<span className="text-pluto font-semibold">fibers</span>) to coherent commits
-            (<span className="text-pluto font-semibold">threads</span>) to production-ready PRs.
+        <div className="text-center mb-20">
+          <h1 className="text-5xl font-bold text-star mb-6">The Git Workflow for AI-First Teams</h1>
+          <p className="text-xl text-star-dim max-w-3xl mx-auto">
+            Shipping code at AI speed breaks traditional git workflows. Pluto fixes that.
           </p>
+        </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="p-8 rounded-lg bg-space-800 border border-space-600">
+        {/* The Challenge - Visual Cards */}
+        <section className="mb-20">
+          <h2 className="text-3xl font-semibold text-star mb-8 text-center">The AI Collaboration Problem</h2>
+
+          <div className="grid md:grid-cols-2 gap-6 mb-8">
+            <div className="p-6 rounded-lg bg-space-800/50 border border-space-600">
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-lg bg-pluto/20 flex items-center justify-center flex-shrink-0">
+                  <Code size={20} className="text-pluto" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-star mb-2">AI Moves Fast</h3>
+                  <p className="text-star-dim">Your AI spots a bug while building a feature. Fix it? Sure. Then another. And another. One commit touches 47 files.</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="p-6 rounded-lg bg-space-800/50 border border-space-600">
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-lg bg-pluto/20 flex items-center justify-center flex-shrink-0">
+                  <AlertCircle size={20} className="text-pluto" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-star mb-2">Reviews Break Down</h3>
+                  <p className="text-star-dim">Your teammate opens the PR. Mixed concerns, unclear changes, impossible to review. What was this supposed to do again?</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="p-8 rounded-lg bg-gradient-to-br from-space-800 to-space-700 border border-pluto/30 text-center">
+            <p className="text-2xl text-star font-semibold mb-2">
+              Shipping faster, collaborating worse.
+            </p>
+            <p className="text-star-dim">Traditional git workflows weren't built for AI speed.</p>
+          </div>
+        </section>
+
+        {/* How Pluto Works */}
+        <section className="mb-20">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-semibold text-star mb-4">How Pluto Works</h2>
+            <p className="text-xl text-star-dim max-w-3xl mx-auto">
+              Weave your development process—from individual changes to production-ready PRs
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <div className="p-8 rounded-lg bg-space-800 border border-space-600 relative">
+              <div className="absolute -top-4 left-8 w-8 h-8 rounded-full bg-pluto text-space-900 font-bold flex items-center justify-center text-sm">
+                1
+              </div>
               <div className="w-14 h-14 rounded-lg bg-space-700 flex items-center justify-center mb-6">
                 <History size={28} className="text-pluto" />
               </div>
-              <h3 className="text-xl font-semibold text-star mb-3">Fibers: Automatic Tracking</h3>
-              <p className="text-star-dim leading-relaxed">
-                Every code change becomes a <span className="text-pluto font-semibold">fiber</span>—a micro-commit
-                with full context. Pluto captures what changed and why, automatically as you work.
+              <h3 className="text-xl font-semibold text-star mb-3">Fibers</h3>
+              <p className="text-star-dim leading-relaxed mb-4">
+                Every code change becomes a <span className="text-pluto font-semibold">fiber</span>—a micro-commit with full context.
               </p>
+              <p className="text-sm text-star-dim/70">Automatic tracking as you work</p>
             </div>
 
-            <div className="p-8 rounded-lg bg-space-800 border border-space-600">
+            <div className="p-8 rounded-lg bg-space-800 border border-space-600 relative">
+              <div className="absolute -top-4 left-8 w-8 h-8 rounded-full bg-pluto text-space-900 font-bold flex items-center justify-center text-sm">
+                2
+              </div>
               <div className="w-14 h-14 rounded-lg bg-space-700 flex items-center justify-center mb-6">
                 <GitBranch size={28} className="text-pluto" />
               </div>
-              <h3 className="text-xl font-semibold text-star mb-3">Threads: Smart Grouping</h3>
-              <p className="text-star-dim leading-relaxed">
-                Spin your fibers into <span className="text-pluto font-semibold">threads</span>—meaningful commits
-                that tell a clear story. Keep your history clean and your team informed.
+              <h3 className="text-xl font-semibold text-star mb-3">Threads</h3>
+              <p className="text-star-dim leading-relaxed mb-4">
+                Spin fibers into <span className="text-pluto font-semibold">threads</span>—meaningful commits that tell a clear story.
               </p>
+              <p className="text-sm text-star-dim/70">Group related changes intelligently</p>
             </div>
 
-            <div className="p-8 rounded-lg bg-space-800 border border-space-600">
+            <div className="p-8 rounded-lg bg-space-800 border border-space-600 relative">
+              <div className="absolute -top-4 left-8 w-8 h-8 rounded-full bg-pluto text-space-900 font-bold flex items-center justify-center text-sm">
+                3
+              </div>
               <div className="w-14 h-14 rounded-lg bg-space-700 flex items-center justify-center mb-6">
                 <Zap size={28} className="text-pluto" />
               </div>
-              <h3 className="text-xl font-semibold text-star mb-3">Weave: PR Ready</h3>
-              <p className="text-star-dim leading-relaxed">
-                Weave everything together for deployment. Sync with your target branch and prepare
-                your threads for seamless integration—no conflicts, no surprises.
+              <h3 className="text-xl font-semibold text-star mb-3">Weave</h3>
+              <p className="text-star-dim leading-relaxed mb-4">
+                Weave everything together for deployment. PR-ready, conflict-free.
               </p>
+              <p className="text-sm text-star-dim/70">Sync and prepare for review</p>
             </div>
+          </div>
+
+          <div className="p-8 rounded-lg bg-space-800/50 border border-pluto/50">
+            <div className="flex items-center gap-4 mb-4">
+              <div className="w-12 h-12 rounded-lg bg-pluto/20 flex items-center justify-center">
+                <Users size={24} className="text-pluto" />
+              </div>
+              <h3 className="text-2xl font-semibold text-star">Never Lose Context</h3>
+            </div>
+            <p className="text-star-dim text-lg">
+              Every fiber captures what changed and why. Your team can trace every decision from micro-commit to final PR.
+            </p>
           </div>
         </section>
 
