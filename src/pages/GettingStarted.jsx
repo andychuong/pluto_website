@@ -9,25 +9,6 @@ export default function GettingStarted() {
           Get Pluto up and running in your project in under a minute.
         </p>
 
-        {/* Prerequisites */}
-        <section className="mb-12">
-          <h2 className="text-2xl font-semibold text-star mb-4">Prerequisites</h2>
-          <ul className="space-y-3 text-star-dim">
-            <li className="flex items-center gap-3">
-              <span className="w-2 h-2 rounded-full bg-pluto"></span>
-              Node.js 18 or higher
-            </li>
-            <li className="flex items-center gap-3">
-              <span className="w-2 h-2 rounded-full bg-pluto"></span>
-              npm (comes with Node.js)
-            </li>
-            <li className="flex items-center gap-3">
-              <span className="w-2 h-2 rounded-full bg-pluto"></span>
-              Git repository (initialized)
-            </li>
-          </ul>
-        </section>
-
         {/* Installation */}
         <section className="mb-12">
           <h2 className="text-2xl font-semibold text-star mb-4">Installation</h2>
