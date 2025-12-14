@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { GitBranch, History, Zap, Users, ArrowRight } from 'lucide-react'
+import { GitBranch, History, Zap, ArrowRight } from 'lucide-react'
 
 export default function Overview() {
   return (
@@ -78,48 +78,37 @@ export default function Overview() {
             (<span className="text-pluto font-semibold">threads</span>) to production-ready PRs.
           </p>
 
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="p-6 rounded-lg bg-space-800 border border-space-600">
-              <div className="w-12 h-12 rounded-lg bg-space-700 flex items-center justify-center mb-4">
-                <History size={24} className="text-pluto" />
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <div className="p-8 rounded-lg bg-space-800 border border-space-600">
+              <div className="w-14 h-14 rounded-lg bg-space-700 flex items-center justify-center mb-6">
+                <History size={28} className="text-pluto" />
               </div>
-              <h3 className="text-lg font-semibold text-star mb-2">Fibers: Automatic Tracking</h3>
-              <p className="text-star-dim text-sm leading-relaxed">
+              <h3 className="text-xl font-semibold text-star mb-3">Fibers: Automatic Tracking</h3>
+              <p className="text-star-dim leading-relaxed">
                 Every code change becomes a <span className="text-pluto font-semibold">fiber</span>—a micro-commit
                 with full context. Pluto captures what changed and why, automatically as you work.
               </p>
             </div>
 
-            <div className="p-6 rounded-lg bg-space-800 border border-space-600">
-              <div className="w-12 h-12 rounded-lg bg-space-700 flex items-center justify-center mb-4">
-                <GitBranch size={24} className="text-pluto" />
+            <div className="p-8 rounded-lg bg-space-800 border border-space-600">
+              <div className="w-14 h-14 rounded-lg bg-space-700 flex items-center justify-center mb-6">
+                <GitBranch size={28} className="text-pluto" />
               </div>
-              <h3 className="text-lg font-semibold text-star mb-2">Threads: Smart Grouping</h3>
-              <p className="text-star-dim text-sm leading-relaxed">
+              <h3 className="text-xl font-semibold text-star mb-3">Threads: Smart Grouping</h3>
+              <p className="text-star-dim leading-relaxed">
                 Spin your fibers into <span className="text-pluto font-semibold">threads</span>—meaningful commits
                 that tell a clear story. Keep your history clean and your team informed.
               </p>
             </div>
 
-            <div className="p-6 rounded-lg bg-space-800 border border-space-600">
-              <div className="w-12 h-12 rounded-lg bg-space-700 flex items-center justify-center mb-4">
-                <Zap size={24} className="text-pluto" />
+            <div className="p-8 rounded-lg bg-space-800 border border-space-600">
+              <div className="w-14 h-14 rounded-lg bg-space-700 flex items-center justify-center mb-6">
+                <Zap size={28} className="text-pluto" />
               </div>
-              <h3 className="text-lg font-semibold text-star mb-2">Weave: PR Ready</h3>
-              <p className="text-star-dim text-sm leading-relaxed">
+              <h3 className="text-xl font-semibold text-star mb-3">Weave: PR Ready</h3>
+              <p className="text-star-dim leading-relaxed">
                 Weave everything together for deployment. Sync with your target branch and prepare
                 your threads for seamless integration—no conflicts, no surprises.
-              </p>
-            </div>
-
-            <div className="p-6 rounded-lg bg-space-800 border border-space-600">
-              <div className="w-12 h-12 rounded-lg bg-space-700 flex items-center justify-center mb-4">
-                <Users size={24} className="text-pluto" />
-              </div>
-              <h3 className="text-lg font-semibold text-star mb-2">Team Visibility</h3>
-              <p className="text-star-dim text-sm leading-relaxed">
-                Give your team full visibility into AI-assisted changes. From fibers to threads,
-                every step is traceable, reviewable, and collaborative.
               </p>
             </div>
           </div>
