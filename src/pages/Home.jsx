@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { GitCommit, Layers, Zap, Terminal } from 'lucide-react'
+import { Sparkles, LinkIcon, PackageCheck } from 'lucide-react'
 import CodeBlock from '../components/CodeBlock'
 import FeatureCard from '../components/FeatureCard'
 
@@ -31,24 +31,19 @@ const shootingStars = [
 
 const features = [
   {
-    icon: GitCommit,
-    title: 'Micro-Commits',
-    description: 'Automatically commits after every file change for granular tracking of AI agent work.',
+    icon: Sparkles,
+    title: 'Fibers: Automatic Tracking',
+    description: 'Every code change becomes a fiber—micro-commits that capture what changed and why, automatically.',
   },
   {
-    icon: Layers,
-    title: 'Smart Consolidation',
-    description: 'Consolidates micro-commits into clean, informative commit messages when you\'re ready.',
+    icon: LinkIcon,
+    title: 'Threads: Smart Grouping',
+    description: 'Spin fibers into threads—meaningful commits that tell a clear story for your team.',
   },
   {
-    icon: Zap,
-    title: 'AI Agent Integration',
-    description: 'Seamlessly integrates with AI coding agents like Claude Code for enhanced workflows.',
-  },
-  {
-    icon: Terminal,
-    title: 'Extensible Commands',
-    description: 'Add custom agent commands to fit your specific workflow needs.',
+    icon: PackageCheck,
+    title: 'Weave: PR Ready',
+    description: 'Weave everything together for deployment. Sync with your target branch, conflict-free.',
   },
 ]
 
@@ -87,13 +82,12 @@ export default function Home() {
       <section className="pt-32 pb-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-star mb-6 leading-tight">
-            Track Every Change<br />
-            <span className="text-pluto">Ship Clean Commits</span>
+            The Git Workflow for<br />
+            <span className="text-pluto">AI-First Teams</span>
           </h1>
           <p className="text-xl text-star-dim mb-10 max-w-2xl mx-auto leading-relaxed">
-            Pluto automatically micro-commits your AI agent's file changes.<br />
-            Then consolidates them into meaningful commits.<br />
-            Never lose work, always ship clean history.
+            Weave your development process—from individual code changes to production-ready PRs.<br />
+            Never lose context, always ship clean history.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Link
@@ -123,12 +117,12 @@ export default function Home() {
       <section className="py-20 px-6 bg-space-800/50">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-star text-center mb-4">
-            Built for AI-First Development Teams
+            From Fibers to Threads to Deployment
           </h2>
           <p className="text-star-dim text-center mb-12 max-w-2xl mx-auto">
-            When AI agents write code, changes happen fast. Pluto keeps up.
+            AI moves fast. Pluto captures every change, then weaves it into clean, reviewable commits.
           </p>
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-3 gap-6">
             {features.map((feature) => (
               <FeatureCard key={feature.title} {...feature} />
             ))}
@@ -140,7 +134,7 @@ export default function Home() {
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-star text-center mb-12">
-            How It Works
+            Simple Workflow
           </h2>
           <div className="space-y-8">
             <div className="flex gap-6 items-start">
@@ -148,9 +142,8 @@ export default function Home() {
                 1
               </div>
               <div>
-                <h3 className="text-xl font-semibold text-star mb-2">Initialize in your project</h3>
-                <p className="text-star-dim mb-3">Run pluto init to set up tracking in your repository.</p>
-                <CodeBlock>pluto init</CodeBlock>
+                <h3 className="text-xl font-semibold text-star mb-2">/pluto-start</h3>
+                <p className="text-star-dim">Begin tracking. Pluto automatically creates fibers as you code—capturing every change with full context.</p>
               </div>
             </div>
             <div className="flex gap-6 items-start">
@@ -158,8 +151,8 @@ export default function Home() {
                 2
               </div>
               <div>
-                <h3 className="text-xl font-semibold text-star mb-2">Work with your AI agent</h3>
-                <p className="text-star-dim">Every file change gets automatically committed with full context. No work is ever lost.</p>
+                <h3 className="text-xl font-semibold text-star mb-2">/pluto-spin</h3>
+                <p className="text-star-dim">Spin fibers into threads—meaningful commits that tell a clear story for your team.</p>
               </div>
             </div>
             <div className="flex gap-6 items-start">
@@ -167,8 +160,8 @@ export default function Home() {
                 3
               </div>
               <div>
-                <h3 className="text-xl font-semibold text-star mb-2">Consolidate when ready</h3>
-                <p className="text-star-dim">Squash micro-commits into clean, meaningful commits for your main branch.</p>
+                <h3 className="text-xl font-semibold text-star mb-2">/pluto-weave</h3>
+                <p className="text-star-dim">Weave everything together. Pull the latest from your target branch and prepare for PR—conflict-free.</p>
               </div>
             </div>
           </div>
