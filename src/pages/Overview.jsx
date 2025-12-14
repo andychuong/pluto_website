@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { GitBranch, History, Zap, ArrowRight, AlertCircle, Users, Code } from 'lucide-react'
+import { ArrowRight, AlertCircle, Users, Code, Sparkles, LinkIcon, PackageCheck } from 'lucide-react'
 
 export default function Overview() {
   return (
@@ -65,10 +65,12 @@ export default function Overview() {
               <div className="absolute -top-4 left-8 w-8 h-8 rounded-full bg-pluto text-space-900 font-bold flex items-center justify-center text-sm">
                 1
               </div>
-              <div className="w-14 h-14 rounded-lg bg-space-700 flex items-center justify-center mb-6">
-                <History size={28} className="text-pluto" />
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-14 h-14 rounded-lg bg-space-700 flex items-center justify-center shrink-0">
+                  <Sparkles size={28} className="text-pluto" />
+                </div>
+                <h3 className="text-xl font-semibold text-star">Fibers</h3>
               </div>
-              <h3 className="text-xl font-semibold text-star mb-3">Fibers</h3>
               <p className="text-star-dim leading-relaxed mb-4">
                 Every code change becomes a <span className="text-pluto font-semibold">fiber</span>—a micro-commit with full context.
               </p>
@@ -79,10 +81,12 @@ export default function Overview() {
               <div className="absolute -top-4 left-8 w-8 h-8 rounded-full bg-pluto text-space-900 font-bold flex items-center justify-center text-sm">
                 2
               </div>
-              <div className="w-14 h-14 rounded-lg bg-space-700 flex items-center justify-center mb-6">
-                <GitBranch size={28} className="text-pluto" />
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-14 h-14 rounded-lg bg-space-700 flex items-center justify-center shrink-0">
+                  <LinkIcon size={28} className="text-pluto" />
+                </div>
+                <h3 className="text-xl font-semibold text-star">Threads</h3>
               </div>
-              <h3 className="text-xl font-semibold text-star mb-3">Threads</h3>
               <p className="text-star-dim leading-relaxed mb-4">
                 Spin fibers into <span className="text-pluto font-semibold">threads</span>—meaningful commits that tell a clear story.
               </p>
@@ -93,10 +97,12 @@ export default function Overview() {
               <div className="absolute -top-4 left-8 w-8 h-8 rounded-full bg-pluto text-space-900 font-bold flex items-center justify-center text-sm">
                 3
               </div>
-              <div className="w-14 h-14 rounded-lg bg-space-700 flex items-center justify-center mb-6">
-                <Zap size={28} className="text-pluto" />
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-14 h-14 rounded-lg bg-space-700 flex items-center justify-center shrink-0">
+                  <PackageCheck size={28} className="text-pluto" />
+                </div>
+                <h3 className="text-xl font-semibold text-star">Weave</h3>
               </div>
-              <h3 className="text-xl font-semibold text-star mb-3">Weave</h3>
               <p className="text-star-dim leading-relaxed mb-4">
                 Weave everything together for deployment. PR-ready, conflict-free.
               </p>
