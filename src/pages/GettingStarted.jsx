@@ -67,23 +67,23 @@ export default function GettingStarted() {
                 <span className="text-pluto font-bold">1</span>
                 <h3 className="font-mono text-pluto">/pluto-start</h3>
               </div>
-              <p className="text-star-dim text-sm">Open Claude Code and run this command to enable micro-commit tracking. Every code change will be automatically committed with context.</p>
+              <p className="text-star-dim text-sm">Begin tracking your work. As you code, Pluto automatically creates micro-commits called <span className="text-pluto font-semibold">fibers</span>—capturing every change with full context.</p>
             </div>
 
             <div className="p-4 rounded-lg bg-space-800 border border-space-600">
               <div className="flex items-center gap-3 mb-2">
                 <span className="text-pluto font-bold">2</span>
-                <h3 className="font-mono text-pluto">/pluto-fuse</h3>
+                <h3 className="font-mono text-pluto">/pluto-spin</h3>
               </div>
-              <p className="text-star-dim text-sm">Consolidate your micro-commits into meaningful, well-documented commits. Groups related changes together with clear explanations.</p>
+              <p className="text-star-dim text-sm">Spin your fibers into <span className="text-pluto font-semibold">threads</span>. Groups related micro-commits into meaningful, well-documented commits ready for your team.</p>
             </div>
 
             <div className="p-4 rounded-lg bg-space-800 border border-space-600">
               <div className="flex items-center gap-3 mb-2">
                 <span className="text-pluto font-bold">3</span>
-                <h3 className="font-mono text-pluto">/pluto-sync</h3>
+                <h3 className="font-mono text-pluto">/pluto-weave</h3>
               </div>
-              <p className="text-star-dim text-sm">Prepare your changes for a pull request. Syncs your branch and ensures everything is ready for review.</p>
+              <p className="text-star-dim text-sm">Weave everything together for your PR. Pulls the latest from your target branch and prepares your threads for seamless integration.</p>
             </div>
           </div>
         </section>

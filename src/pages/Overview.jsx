@@ -73,8 +73,9 @@ export default function Overview() {
           <h2 className="text-2xl font-semibold text-star mb-6">Our Solution</h2>
           <p className="text-star-dim mb-8 leading-relaxed">
             <span className="text-star font-semibold">Pluto</span> is a git workflow tool that integrates
-            with AI coding agents. It automatically commits after every file change for granular tracking,
-            then consolidates these micro-commits into clean, informative commit messages.
+            with AI coding agents. It weaves together your development process—from individual code changes
+            (<span className="text-pluto font-semibold">fibers</span>) to coherent commits
+            (<span className="text-pluto font-semibold">threads</span>) to production-ready PRs.
           </p>
 
           <div className="grid md:grid-cols-2 gap-6">
@@ -82,10 +83,10 @@ export default function Overview() {
               <div className="w-12 h-12 rounded-lg bg-space-700 flex items-center justify-center mb-4">
                 <History size={24} className="text-pluto" />
               </div>
-              <h3 className="text-lg font-semibold text-star mb-2">Micro-Commits</h3>
+              <h3 className="text-lg font-semibold text-star mb-2">Fibers: Automatic Tracking</h3>
               <p className="text-star-dim text-sm leading-relaxed">
-                Every file change is automatically committed with context about what changed and why.
-                Never lose track of your AI agent's work.
+                Every code change becomes a <span className="text-pluto font-semibold">fiber</span>—a micro-commit
+                with full context. Pluto captures what changed and why, automatically as you work.
               </p>
             </div>
 
@@ -93,10 +94,10 @@ export default function Overview() {
               <div className="w-12 h-12 rounded-lg bg-space-700 flex items-center justify-center mb-4">
                 <GitBranch size={24} className="text-pluto" />
               </div>
-              <h3 className="text-lg font-semibold text-star mb-2">Clean Consolidation</h3>
+              <h3 className="text-lg font-semibold text-star mb-2">Threads: Smart Grouping</h3>
               <p className="text-star-dim text-sm leading-relaxed">
-                When you're ready, consolidate micro-commits into meaningful commits. Keep your
-                main branch history readable for your team.
+                Spin your fibers into <span className="text-pluto font-semibold">threads</span>—meaningful commits
+                that tell a clear story. Keep your history clean and your team informed.
               </p>
             </div>
 
@@ -104,10 +105,10 @@ export default function Overview() {
               <div className="w-12 h-12 rounded-lg bg-space-700 flex items-center justify-center mb-4">
                 <Zap size={24} className="text-pluto" />
               </div>
-              <h3 className="text-lg font-semibold text-star mb-2">Seamless Integration</h3>
+              <h3 className="text-lg font-semibold text-star mb-2">Weave: PR Ready</h3>
               <p className="text-star-dim text-sm leading-relaxed">
-                Install Pluto in your repository and let your AI agent handle git operations
-                seamlessly. No workflow changes required.
+                Weave everything together for deployment. Sync with your target branch and prepare
+                your threads for seamless integration—no conflicts, no surprises.
               </p>
             </div>
 
@@ -117,8 +118,8 @@ export default function Overview() {
               </div>
               <h3 className="text-lg font-semibold text-star mb-2">Team Visibility</h3>
               <p className="text-star-dim text-sm leading-relaxed">
-                Give your team full visibility into AI-assisted changes. Review, understand,
-                and collaborate effectively.
+                Give your team full visibility into AI-assisted changes. From fibers to threads,
+                every step is traceable, reviewable, and collaborative.
               </p>
             </div>
           </div>
