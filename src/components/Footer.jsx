@@ -3,14 +3,11 @@ import { Github } from 'lucide-react'
 export default function Footer() {
   return (
     <footer className="border-t border-space-600 bg-space-900">
-      <div className="max-w-6xl mx-auto px-6 py-8">
+      <div className="max-w-6xl mx-auto px-6 py-4">
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-star-dim text-sm">
             Built for AI-first engineers
           </p>
-          <div className="text-star-dim">
-            <span>Pluto</span>
-          </div>
           <div className="flex gap-6 text-star-dim text-sm">
             <a
               href="https://github.com/andychuong/pluto"
