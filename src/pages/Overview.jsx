@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { ArrowRight, AlertCircle, Users, Code, Sparkles, LinkIcon, PackageCheck } from 'lucide-react'
+import { ArrowRight, AlertCircle, Users, Code } from 'lucide-react'
 
 export default function Overview() {
   return (
@@ -51,75 +51,46 @@ export default function Overview() {
           </div>
         </section>
 
-        {/* How Pluto Works */}
+        {/* The Solution - Focus on unique value */}
         <section className="mb-20">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-semibold text-star mb-4">How Pluto Works</h2>
+            <h2 className="text-3xl font-semibold text-star mb-4">The Pluto Approach</h2>
             <p className="text-xl text-star-dim max-w-3xl mx-auto">
-              Weave your development process—from individual changes to production-ready PRs
+              Capture everything, organize intelligently, ship confidently
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <div className="p-8 rounded-lg bg-space-800 border border-space-600 relative">
-              <div className="absolute -top-4 left-8 w-8 h-8 rounded-full bg-pluto text-space-900 font-bold flex items-center justify-center text-sm">
-                1
-              </div>
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-14 h-14 rounded-lg bg-space-700 flex items-center justify-center shrink-0">
-                  <Sparkles size={28} className="text-pluto" />
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+            <div className="p-8 rounded-lg bg-space-800/50 border border-pluto/50">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-12 h-12 rounded-lg bg-pluto/20 flex items-center justify-center">
+                  <Users size={24} className="text-pluto" />
                 </div>
-                <h3 className="text-xl font-semibold text-star">Fibers</h3>
+                <h3 className="text-2xl font-semibold text-star">Never Lose Context</h3>
               </div>
-              <p className="text-star-dim leading-relaxed mb-4">
-                Every code change becomes a <span className="text-pluto font-semibold">fiber</span>—a micro-commit with full context.
+              <p className="text-star-dim text-lg leading-relaxed">
+                Every fiber captures what changed and why. Your team can trace every decision from micro-commit to final PR. No more "what was I thinking?" moments.
               </p>
-              <p className="text-sm text-star-dim/70">Automatic tracking as you work</p>
             </div>
 
-            <div className="p-8 rounded-lg bg-space-800 border border-space-600 relative">
-              <div className="absolute -top-4 left-8 w-8 h-8 rounded-full bg-pluto text-space-900 font-bold flex items-center justify-center text-sm">
-                2
-              </div>
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-14 h-14 rounded-lg bg-space-700 flex items-center justify-center shrink-0">
-                  <LinkIcon size={28} className="text-pluto" />
+            <div className="p-8 rounded-lg bg-space-800/50 border border-pluto/50">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-12 h-12 rounded-lg bg-pluto/20 flex items-center justify-center">
+                  <Code size={24} className="text-pluto" />
                 </div>
-                <h3 className="text-xl font-semibold text-star">Threads</h3>
+                <h3 className="text-2xl font-semibold text-star">Built for AI Speed</h3>
               </div>
-              <p className="text-star-dim leading-relaxed mb-4">
-                Spin fibers into <span className="text-pluto font-semibold">threads</span>—meaningful commits that tell a clear story.
+              <p className="text-star-dim text-lg leading-relaxed">
+                Traditional git workflows assume humans write every line. Pluto embraces AI's burst-driven development style while keeping your history clean and reviewable.
               </p>
-              <p className="text-sm text-star-dim/70">Group related changes intelligently</p>
-            </div>
-
-            <div className="p-8 rounded-lg bg-space-800 border border-space-600 relative">
-              <div className="absolute -top-4 left-8 w-8 h-8 rounded-full bg-pluto text-space-900 font-bold flex items-center justify-center text-sm">
-                3
-              </div>
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-14 h-14 rounded-lg bg-space-700 flex items-center justify-center shrink-0">
-                  <PackageCheck size={28} className="text-pluto" />
-                </div>
-                <h3 className="text-xl font-semibold text-star">Weave</h3>
-              </div>
-              <p className="text-star-dim leading-relaxed mb-4">
-                Weave everything together for deployment. PR-ready, conflict-free.
-              </p>
-              <p className="text-sm text-star-dim/70">Sync and prepare for review</p>
             </div>
           </div>
 
-          <div className="p-8 rounded-lg bg-space-800/50 border border-pluto/50">
-            <div className="flex items-center gap-4 mb-4">
-              <div className="w-12 h-12 rounded-lg bg-pluto/20 flex items-center justify-center">
-                <Users size={24} className="text-pluto" />
-              </div>
-              <h3 className="text-2xl font-semibold text-star">Never Lose Context</h3>
-            </div>
-            <p className="text-star-dim text-lg">
-              Every fiber captures what changed and why. Your team can trace every decision from micro-commit to final PR.
+          <div className="p-8 rounded-lg bg-gradient-to-br from-space-800 to-space-700 border border-pluto/30 text-center">
+            <p className="text-2xl text-star font-semibold mb-3">
+              The result? Move fast without breaking collaboration.
             </p>
+            <p className="text-star-dim text-lg">Ship at AI speed with human-readable history.</p>
           </div>
         </section>
 
