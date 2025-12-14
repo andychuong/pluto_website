@@ -3,7 +3,7 @@ import CodeBlock from '../components/CodeBlock'
 export default function GettingStarted() {
   return (
     <div className="min-h-screen pt-24 pb-20 px-6">
-      <div className="max-w-3xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         <h1 className="text-4xl font-bold text-star mb-4">Getting Started</h1>
         <p className="text-xl text-star-dim mb-12">
           Get Pluto up and running in your project in under a minute.

@@ -4,7 +4,7 @@ import { GitBranch, History, Zap, ArrowRight } from 'lucide-react'
 export default function Overview() {
   return (
     <div className="min-h-screen pt-24 pb-20 px-6">
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         {/* Hero Section */}
         <h1 className="text-4xl font-bold text-star mb-4">The Story Behind Pluto</h1>
         <p className="text-xl text-star-dim mb-16">
@@ -78,7 +78,7 @@ export default function Overview() {
             (<span className="text-pluto font-semibold">threads</span>) to production-ready PRs.
           </p>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8">
             <div className="p-8 rounded-lg bg-space-800 border border-space-600">
               <div className="w-14 h-14 rounded-lg bg-space-700 flex items-center justify-center mb-6">
                 <History size={28} className="text-pluto" />
