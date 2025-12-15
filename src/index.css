@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&display=swap');
 
 @theme {
   /* Space theme colors - avoiding AI purple/blue gradients */
@@ -18,6 +19,7 @@
   /* Terminal green for code elements */
   --color-terminal: #4ade80;
 
+  --font-family-display: 'Syncopate', system-ui, sans-serif;
   --font-family-mono: 'JetBrains Mono', 'Fira Code', ui-monospace, monospace;
 }
 
@@ -31,6 +33,20 @@ body {
   background-color: var(--color-space-900);
   color: var(--color-star);
   min-height: 100vh;
+}
+
+/* Apply Syncopate to headers and logo */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-display);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* Navbar logo */
+nav a[href="/"] {
+  font-family: var(--font-family-display);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
 /* Stars background effect - multiple layers with different sizes for natural look */
