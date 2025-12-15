@@ -17,16 +17,18 @@ const twinklingStars = [
   { top: '85%', left: '45%', duration: '3s', delay: '1.8s' },
 ]
 
-// Shooting stars with staggered timing - spread across the sky
+// Shooting stars with staggered timing - spread across the sky at varied heights
 const shootingStars = [
   { top: '5%', left: '15%', duration: '6s', delay: '0s' },
-  { top: '12%', left: '45%', duration: '7s', delay: '1.5s' },
-  { top: '3%', left: '75%', duration: '5s', delay: '3s' },
-  { top: '18%', left: '25%', duration: '8s', delay: '5s' },
-  { top: '8%', left: '55%', duration: '6s', delay: '7s' },
-  { top: '15%', left: '85%', duration: '7s', delay: '9s' },
-  { top: '6%', left: '35%', duration: '5s', delay: '11s' },
-  { top: '10%', left: '65%', duration: '6s', delay: '13s' },
+  { top: '25%', left: '45%', duration: '7s', delay: '1.5s' },
+  { top: '12%', left: '75%', duration: '5s', delay: '3s' },
+  { top: '40%', left: '25%', duration: '8s', delay: '5s' },
+  { top: '18%', left: '55%', duration: '6s', delay: '7s' },
+  { top: '35%', left: '85%', duration: '7s', delay: '9s' },
+  { top: '8%', left: '35%', duration: '5s', delay: '11s' },
+  { top: '28%', left: '65%', duration: '6s', delay: '13s' },
+  { top: '50%', left: '20%', duration: '7s', delay: '15s' },
+  { top: '45%', left: '70%', duration: '6s', delay: '17s' },
 ]
 
 const features = [

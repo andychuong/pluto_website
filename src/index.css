@@ -111,7 +111,7 @@ nav a[href="/"].flex {
   position: absolute;
   width: 150px;
   height: 2px;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), rgba(255,255,255,0.9));
+  background: linear-gradient(90deg, transparent, rgba(212, 165, 116, 0.4), rgba(212, 165, 116, 0.9));
   transform: rotate(215deg);
   animation: shoot var(--duration, 3s) linear infinite;
   animation-delay: var(--delay, 0s);
@@ -124,9 +124,9 @@ nav a[href="/"].flex {
   position: absolute;
   width: 6px;
   height: 6px;
-  background: white;
+  background: #d4a574;
   border-radius: 50%;
-  box-shadow: 0 0 10px 3px rgba(255,255,255,0.8), 0 0 20px 6px rgba(255,255,255,0.4);
+  box-shadow: 0 0 10px 3px rgba(212, 165, 116, 0.8), 0 0 20px 6px rgba(212, 165, 116, 0.4);
   right: 0;
   top: -2px;
 }
