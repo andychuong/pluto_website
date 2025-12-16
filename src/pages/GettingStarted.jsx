@@ -16,7 +16,7 @@ export default function GettingStarted() {
             Install Pluto globally using the install script:
           </p>
           <CodeBlock>
-            curl -fsSL https://raw.githubusercontent.com/andychuong/pluto/main/install.sh | bash
+            curl -fsSL plutoai.dev/install | bash
           </CodeBlock>
           <p className="text-star-dim mt-4 text-sm">
             To install from a specific branch, modify the URL accordingly.

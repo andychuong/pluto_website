@@ -2,34 +2,39 @@ import { Link } from 'react-router-dom'
 import { Sparkles, LinkIcon, PackageCheck } from 'lucide-react'
 import CodeBlock from '../components/CodeBlock'
 import FeatureCard from '../components/FeatureCard'
+import { useMemo } from 'react'
 
-// Twinkling stars with randomized positions and timing
-const twinklingStars = [
-  { top: '8%', left: '15%', duration: '4s', delay: '0s' },
-  { top: '12%', left: '85%', duration: '3s', delay: '1s' },
-  { top: '25%', left: '10%', duration: '5s', delay: '0.5s' },
-  { top: '18%', left: '70%', duration: '3.5s', delay: '2s' },
-  { top: '35%', left: '92%', duration: '4s', delay: '1.5s' },
-  { top: '45%', left: '5%', duration: '3s', delay: '0.8s' },
-  { top: '55%', left: '88%', duration: '4.5s', delay: '2.5s' },
-  { top: '65%', left: '20%', duration: '3.5s', delay: '1.2s' },
-  { top: '75%', left: '78%', duration: '4s', delay: '0.3s' },
-  { top: '85%', left: '45%', duration: '3s', delay: '1.8s' },
-]
+// Generate random thread parameters
+const generateThreadKnots = (count) => {
+  return Array.from({ length: count }, () => ({
+    top: `${Math.random() * 45}%`,
+    left: `${Math.random() * 95}%`,
+    duration: `${3 + Math.random() * 1.5}s`,
+    delay: `${Math.random() * 2}s`,
+  }))
+}
 
-// Shooting stars with staggered timing - spread across the sky at varied heights
-const shootingStars = [
-  { top: '5%', left: '15%', duration: '6s', delay: '0s' },
-  { top: '25%', left: '45%', duration: '7s', delay: '1.5s' },
-  { top: '12%', left: '75%', duration: '5s', delay: '3s' },
-  { top: '40%', left: '25%', duration: '8s', delay: '5s' },
-  { top: '18%', left: '55%', duration: '6s', delay: '7s' },
-  { top: '35%', left: '85%', duration: '7s', delay: '9s' },
-  { top: '8%', left: '35%', duration: '5s', delay: '11s' },
-  { top: '28%', left: '65%', duration: '6s', delay: '13s' },
-  { top: '50%', left: '20%', duration: '7s', delay: '15s' },
-  { top: '45%', left: '70%', duration: '6s', delay: '17s' },
-]
+const generateHorizontalThreads = (count) => {
+  return Array.from({ length: count }, () => ({
+    top: `${Math.random() * 45}%`,
+    left: `${Math.random() * 70}%`,
+    duration: `${6 + Math.random() * 4}s`,
+    delay: `${Math.random() * 5}s`,
+    color: Math.random() > 0.5 ? 'cream' : 'copper',
+    width: `${140 + Math.random() * 85}px`,
+  }))
+}
+
+const generateVerticalThreads = (count) => {
+  return Array.from({ length: count }, () => ({
+    left: `${Math.random() * 95}%`,
+    top: `${Math.random() * 15}%`,
+    duration: `${8 + Math.random() * 3}s`,
+    delay: `${Math.random() * 5}s`,
+    color: Math.random() > 0.5 ? 'cream' : 'copper',
+    height: `${155 + Math.random() * 80}px`,
+  }))
+}
 
 const features = [
   {
@@ -50,32 +55,59 @@ const features = [
 ]
 
 export default function Home() {
+  // Generate threads once on mount
+  const threadKnots = useMemo(() => generateThreadKnots(3), [])
+  const horizontalThreads = useMemo(() => generateHorizontalThreads(3), [])
+  const verticalThreads = useMemo(() => generateVerticalThreads(3), [])
+
   return (
     <div className="stars-bg min-h-screen">
-      {/* Twinkling stars */}
-      {twinklingStars.map((star, i) => (
+      {/* Thread knots */}
+      {threadKnots.map((knot, i) => (
         <div
           key={i}
           className="twinkle"
           style={{
-            top: star.top,
-            left: star.left,
-            '--duration': star.duration,
-            '--delay': star.delay,
+            top: knot.top,
+            left: knot.left,
+            '--duration': knot.duration,
+            '--delay': knot.delay,
           }}
         />
       ))}
 
-      {/* Shooting stars */}
-      {shootingStars.map((star, i) => (
+      {/* Horizontal weaving threads */}
+      {horizontalThreads.map((thread, i) => (
         <div
-          key={`shooting-${i}`}
+          key={`h-thread-${i}`}
           className="shooting-star"
+          data-direction="horizontal"
+          data-color={thread.color}
           style={{
-            top: star.top,
-            left: star.left,
-            '--duration': star.duration,
-            '--delay': star.delay,
+            top: thread.top,
+            left: thread.left,
+            width: thread.width,
+            '--duration': thread.duration,
+            '--delay': thread.delay,
+            '--gradient-direction': '90deg',
+          }}
+        />
+      ))}
+
+      {/* Vertical weaving threads */}
+      {verticalThreads.map((thread, i) => (
+        <div
+          key={`v-thread-${i}`}
+          className="shooting-star"
+          data-direction="vertical"
+          data-color={thread.color}
+          style={{
+            top: thread.top,
+            left: thread.left,
+            height: thread.height,
+            '--duration': thread.duration,
+            '--delay': thread.delay,
+            '--gradient-direction': '180deg',
           }}
         />
       ))}
@@ -109,14 +141,14 @@ export default function Home() {
           </div>
           <div className="max-w-xl mx-auto">
             <CodeBlock>
-              curl -fsSL https://raw.githubusercontent.com/andychuong/pluto/main/install.sh | bash
+              curl -fsSL plutoai.dev/install | bash
             </CodeBlock>
           </div>
         </div>
       </section>
 
       {/* Features */}
-      <section className="py-20 px-6 bg-space-800/50">
+      <section className="py-20 px-6 bg-space-800/50 relative z-10">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-star text-center mb-4">
             From Fibers to Threads to Deployment
@@ -133,7 +165,7 @@ export default function Home() {
       </section>
 
       {/* How it works */}
-      <section className="py-20 px-6">
+      <section className="py-20 px-6 relative z-10 bg-space-900">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-star text-center mb-12">
             Simple Workflow
@@ -171,7 +203,7 @@ export default function Home() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 px-6 bg-space-800/50">
+      <section className="py-20 px-6 bg-space-800/50 relative z-10">
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-star mb-4">
             Ready to streamline your AI workflow?

@@ -2,16 +2,16 @@
 @import "tailwindcss";
 
 @theme {
-  /* Space theme colors - avoiding AI purple/blue gradients */
-  --color-space-900: #0a0a0f;
-  --color-space-800: #12121a;
-  --color-space-700: #1a1a24;
-  --color-space-600: #24242e;
+  /* Tapestry theme colors - natural woven fabric tones */
+  --color-space-900: #0f0e0d;
+  --color-space-800: #1a1816;
+  --color-space-700: #252220;
+  --color-space-600: #2f2c28;
 
-  --color-star: #f5f5f0;
-  --color-star-dim: #a8a8a0;
+  --color-star: #f5f3f0;
+  --color-star-dim: #a8a29e;
 
-  /* Warm copper/orange accent like distant planets */
+  /* Warm copper/orange accent - like copper thread */
   --color-pluto: #d4a574;
   --color-pluto-light: #e8c9a8;
   --color-pluto-dark: #b8845c;
@@ -38,115 +38,123 @@ nav a[href="/"].flex {
   letter-spacing: 0.1em;
 }
 
-/* Stars background effect - multiple layers with different sizes for natural look */
+/* Tapestry background - clean backdrop for animated threads */
 .stars-bg {
   background-color: var(--color-space-900);
   position: relative;
+  overflow: hidden;
 }
 
-.stars-bg::before,
-.stars-bg::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-}
-
-/* Layer 1: Small distant stars */
-.stars-bg::before {
-  background-image:
-    radial-gradient(1px 1px at 47px 23px, rgba(255,255,255,0.4), transparent),
-    radial-gradient(1px 1px at 131px 89px, rgba(255,255,255,0.3), transparent),
-    radial-gradient(1px 1px at 203px 147px, rgba(255,255,255,0.35), transparent),
-    radial-gradient(1px 1px at 89px 201px, rgba(255,255,255,0.25), transparent),
-    radial-gradient(1px 1px at 167px 67px, rgba(255,255,255,0.3), transparent),
-    radial-gradient(1px 1px at 241px 189px, rgba(255,255,255,0.4), transparent),
-    radial-gradient(1px 1px at 19px 157px, rgba(255,255,255,0.2), transparent),
-    radial-gradient(1px 1px at 283px 43px, rgba(255,255,255,0.35), transparent),
-    radial-gradient(1px 1px at 113px 271px, rgba(255,255,255,0.3), transparent),
-    radial-gradient(1px 1px at 197px 311px, rgba(255,255,255,0.25), transparent),
-    radial-gradient(1px 1px at 67px 89px, rgba(255,255,255,0.3), transparent),
-    radial-gradient(1px 1px at 311px 127px, rgba(255,255,255,0.4), transparent),
-    radial-gradient(1px 1px at 257px 263px, rgba(255,255,255,0.2), transparent),
-    radial-gradient(1px 1px at 29px 297px, rgba(255,255,255,0.35), transparent),
-    radial-gradient(1px 1px at 349px 71px, rgba(255,255,255,0.3), transparent);
-  background-size: 400px 350px;
-}
-
-/* Layer 2: Medium and bright stars with slight warmth */
-.stars-bg::after {
-  background-image:
-    radial-gradient(2px 2px at 73px 41px, rgba(255,252,245,0.6), transparent),
-    radial-gradient(1.5px 1.5px at 197px 163px, rgba(255,255,255,0.5), transparent),
-    radial-gradient(2px 2px at 311px 97px, rgba(255,248,240,0.55), transparent),
-    radial-gradient(1.5px 1.5px at 127px 289px, rgba(255,255,255,0.45), transparent),
-    radial-gradient(2px 2px at 389px 211px, rgba(255,252,245,0.5), transparent),
-    radial-gradient(1.5px 1.5px at 53px 347px, rgba(255,255,255,0.4), transparent),
-    radial-gradient(2px 2px at 263px 53px, rgba(255,248,240,0.6), transparent),
-    radial-gradient(1.5px 1.5px at 431px 137px, rgba(255,255,255,0.5), transparent),
-    radial-gradient(2px 2px at 167px 401px, rgba(255,252,245,0.45), transparent),
-    radial-gradient(3px 3px at 347px 347px, rgba(255,248,235,0.7), transparent),
-    radial-gradient(2.5px 2.5px at 89px 173px, rgba(255,255,250,0.55), transparent);
-  background-size: 500px 450px;
-}
-
-/* Twinkling stars - separate elements for animation */
+/* Thread intersection points - subtle highlights */
 .stars-bg .twinkle {
   position: absolute;
   width: 2px;
   height: 2px;
-  background: white;
+  background: rgba(212, 165, 116, 0.25);
   border-radius: 50%;
-  animation: twinkle var(--duration, 3s) ease-in-out infinite;
+  animation: pulse var(--duration, 4s) ease-in-out infinite;
   animation-delay: var(--delay, 0s);
 }
 
-@keyframes twinkle {
-  0%, 100% { opacity: 0.2; transform: scale(1); }
-  50% { opacity: 1; transform: scale(1.2); }
+@keyframes pulse {
+  0%, 100% { opacity: 0.15; transform: scale(0.8); }
+  50% { opacity: 0.4; transform: scale(1.2); }
 }
 
-/* Shooting stars - streak from top-right to bottom-left */
-.shooting-star {
+/* Horizontal weaving threads */
+.shooting-star[data-direction="horizontal"] {
   position: absolute;
-  width: 150px;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, rgba(212, 165, 116, 0.4), rgba(212, 165, 116, 0.9));
-  transform: rotate(215deg);
-  animation: shoot var(--duration, 3s) linear infinite;
+  height: 1.5px;
+  animation: sewHorizontal var(--duration, 10s) linear infinite;
   animation-delay: var(--delay, 0s);
-  opacity: 0;
   pointer-events: none;
+  transform-origin: right center;
+  z-index: 1;
 }
 
-.shooting-star::before {
-  content: '';
+/* Vertical weaving threads */
+.shooting-star[data-direction="vertical"] {
   position: absolute;
-  width: 6px;
-  height: 6px;
-  background: #d4a574;
-  border-radius: 50%;
-  box-shadow: 0 0 10px 3px rgba(212, 165, 116, 0.8), 0 0 20px 6px rgba(212, 165, 116, 0.4);
-  right: 0;
-  top: -2px;
+  width: 1.5px;
+  animation: sewVertical var(--duration, 12s) linear infinite;
+  animation-delay: var(--delay, 0s);
+  pointer-events: none;
+  transform-origin: center bottom;
+  z-index: 1;
 }
 
-@keyframes shoot {
+/* Copper/gold thread color */
+.shooting-star[data-color="copper"] {
+  background: linear-gradient(var(--gradient-direction, 90deg), transparent 0%, rgba(212, 165, 116, 0.2) 5%, rgba(212, 165, 116, 0.5) 15%, rgba(212, 165, 116, 0.7) 50%, rgba(212, 165, 116, 0.5) 85%, rgba(212, 165, 116, 0.2) 95%, transparent 100%);
+  box-shadow: 0 0 4px rgba(212, 165, 116, 0.4);
+}
+
+/* Light/cream thread color */
+.shooting-star[data-color="cream"] {
+  background: linear-gradient(var(--gradient-direction, 90deg), transparent 0%, rgba(245, 243, 240, 0.2) 5%, rgba(245, 243, 240, 0.4) 15%, rgba(245, 243, 240, 0.6) 50%, rgba(245, 243, 240, 0.4) 85%, rgba(245, 243, 240, 0.2) 95%, transparent 100%);
+  box-shadow: 0 0 4px rgba(245, 243, 240, 0.3);
+}
+
+/* Default for backwards compatibility */
+.shooting-star:not([data-direction]) {
+  position: absolute;
+  width: 300px;
+  height: 1.5px;
+  background: linear-gradient(90deg, transparent 0%, transparent 5%, rgba(212, 165, 116, 0.5) 10%, rgba(212, 165, 116, 0.7) 50%, rgba(212, 165, 116, 0.5) 90%, transparent 95%, transparent 100%);
+  animation: sewHorizontal var(--duration, 10s) ease-in-out infinite;
+  animation-delay: var(--delay, 0s);
+  pointer-events: none;
+  box-shadow: 0 0 4px rgba(212, 165, 116, 0.4);
+  transform-origin: right center;
+}
+
+@keyframes sewHorizontal {
   0% {
     opacity: 0;
-    transform: rotate(215deg) translateX(0);
+    clip-path: inset(0 100% 0 0);
   }
-  2% {
+  5% {
     opacity: 1;
   }
-  12% {
-    opacity: 0.8;
-    transform: rotate(215deg) translateX(500px);
+  35% {
+    clip-path: inset(0 0 0 0);
   }
-  13%, 100% {
+  95% {
+    opacity: 1;
+  }
+  100% {
     opacity: 0;
-    transform: rotate(215deg) translateX(500px);
+    clip-path: inset(0 0 0 100%);
   }
+}
+
+@keyframes sewVertical {
+  0% {
+    opacity: 0;
+    clip-path: inset(100% 0 0 0);
+  }
+  5% {
+    opacity: 1;
+  }
+  35% {
+    clip-path: inset(0 0 0 0);
+  }
+  95% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    clip-path: inset(0 0 100% 0);
+  }
+}
+
+/* Ensure sections cover threads underneath */
+section {
+  position: relative;
+}
+
+section.bg-space-800\/50 {
+  background-color: rgba(26, 24, 22, 0.95) !important;
 }
 
 /* Code block styling */
@@ -154,7 +162,7 @@ nav a[href="/"].flex {
   background-color: var(--color-space-800);
   border: 1px solid var(--color-space-600);
   border-radius: 8px;
-  padding: 1rem;
+  padding: 0.75rem 1rem;
   font-family: var(--font-family-mono);
   overflow-x: auto;
 }
