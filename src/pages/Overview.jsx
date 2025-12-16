@@ -51,6 +51,66 @@ export default function Overview() {
           </div>
         </section>
 
+        {/* How It Works */}
+        <section className="mb-20">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-semibold text-star mb-4">How Pluto Works</h2>
+            <p className="text-xl text-star-dim max-w-3xl mx-auto">
+              A simple workflow that turns chaotic AI changes into clean, reviewable commits
+            </p>
+          </div>
+
+          <div className="space-y-6 max-w-4xl mx-auto mb-12">
+            {/* Step 1 */}
+            <div className="p-6 rounded-lg bg-space-800/50 border border-space-600">
+              <div className="flex items-start gap-4">
+                <div className="w-8 h-8 rounded-full bg-pluto/20 flex items-center justify-center flex-shrink-0 text-pluto font-bold">
+                  1
+                </div>
+                <div className="flex-1">
+                  <div className="flex items-center gap-3 mb-2">
+                    <code className="text-pluto font-mono text-sm bg-space-900 px-3 py-1 rounded">/pluto-start</code>
+                    <span className="text-star-dim">Start tracking</span>
+                  </div>
+                  <p className="text-star-dim">Begin a session. Pluto automatically creates a <span className="text-star font-semibold">fiber</span> (context-rich micro-commit) every time a file changes.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Step 2 */}
+            <div className="p-6 rounded-lg bg-space-800/50 border border-space-600">
+              <div className="flex items-start gap-4">
+                <div className="w-8 h-8 rounded-full bg-pluto/20 flex items-center justify-center flex-shrink-0 text-pluto font-bold">
+                  2
+                </div>
+                <div className="flex-1">
+                  <div className="flex items-center gap-3 mb-2">
+                    <code className="text-pluto font-mono text-sm bg-space-900 px-3 py-1 rounded">/pluto-spin</code>
+                    <span className="text-star-dim">Organize changes</span>
+                  </div>
+                  <p className="text-star-dim">Spin fibers into <span className="text-star font-semibold">threads</span> (clean, logical commits). AI groups related changes together and validates the quality.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Step 3 */}
+            <div className="p-6 rounded-lg bg-space-800/50 border border-space-600">
+              <div className="flex items-start gap-4">
+                <div className="w-8 h-8 rounded-full bg-pluto/20 flex items-center justify-center flex-shrink-0 text-pluto font-bold">
+                  3
+                </div>
+                <div className="flex-1">
+                  <div className="flex items-center gap-3 mb-2">
+                    <code className="text-pluto font-mono text-sm bg-space-900 px-3 py-1 rounded">/pluto-weave [branch]</code>
+                    <span className="text-star-dim">Merge with ease</span>
+                  </div>
+                  <p className="text-star-dim">Pull remote changes and intelligently weave your local threads in. AI assists with conflict resolution when needed.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* The Solution - Focus on unique value */}
         <section className="mb-20">
           <div className="text-center mb-12">
